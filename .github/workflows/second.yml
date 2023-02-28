@@ -21,6 +21,8 @@ jobs:
   needs: [job1, job2]
   name: 'Trabajo 3'
   runs-on: ubuntu-latest
+  steps:
+  - run: bash env
  job4:
   name: 'Trabajo 4'
   runs-on: ubuntu-latest
