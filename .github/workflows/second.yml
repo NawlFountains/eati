@@ -22,7 +22,7 @@ jobs:
   name: 'Trabajo 3'
   runs-on: ubuntu-latest
   steps:
-  - run: bash env
+  - run: env
  job4:
   name: 'Trabajo 4'
   runs-on: ubuntu-latest
