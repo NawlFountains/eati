@@ -12,6 +12,6 @@ jobs:
   name: Job2
   runs-on: windows-latest
   steps:
-  - runs: | 
+  - run: | 
      echo 'Mi nombre es Nahuel'
      echo 'Estoy haciendo un curso de GitHub Actions'
