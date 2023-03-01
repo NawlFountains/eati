@@ -15,7 +15,10 @@ jobs:
           repository: jmoyano/cautious-meme
           ref: main
           path: ./cautious-meme
-      - run: gcc /cautious-meme/main.c -o main
+      #Remove
+      - run: ls
+      - run: ls /cautious-meme
+      - run: gcc ./cautious-meme/main.c -o main
       - uses: actions/upload-artifact@v3
         with:
           name: cautious-meme
