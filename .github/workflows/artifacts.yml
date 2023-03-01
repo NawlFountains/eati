@@ -16,7 +16,7 @@ jobs:
           ref: main
           path: ./cautious-meme
       - run: gcc /cautious-meme/main.c -o main
-      - uses: actions/upload-artifacts@v3
+      - uses: actions/upload-artifact@v3
         with:
           name: cautious-meme
           path: ./${{ env.FILE_NAME }}
@@ -24,7 +24,7 @@ jobs:
     needs: [ 'build' ]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifacts@v3
+      - uses: actions/download-artifact@v3
         with:
           name: cautious-meme
       - run: |
