@@ -18,8 +18,8 @@ jobs:
   steps:
    - name: 'Primer step'
      env:
-     STEP_VARIABLE: 'step steps'
-     SCOPE: 'scope override steps'
+      STEP_VARIABLE: 'step steps'
+      SCOPE: 'scope override steps'
      run: |
       echo ${{ env.WORKFLOW_VARIABLE }}
       echo ${{ env.JOB_VARIABLE }}
