@@ -29,4 +29,5 @@ jobs:
           name: cautious-meme
       - run: |
          ls
+         chmod 754 main
          ./main
