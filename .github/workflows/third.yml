@@ -20,4 +20,4 @@ jobs:
      ref: anotherbranch
      path: ./eati
   - run: |
-     ls
+     ls eati
