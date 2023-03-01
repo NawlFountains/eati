@@ -1,0 +1,31 @@
+name: Artifacts
+on:
+  push:
+    branches:
+      - workflowArtifacts
+env:
+  FILE_NAME: main.c
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: jmoyano/cautious-meme
+          ref: main
+          path: ./cautious-meme
+      - run: gcc /cautious-meme/main.c -o main
+      - uses: actions/upload-artifacts@v3
+        with:
+          name: cautious-meme
+          path: ./${{ env.FILE_NAME }}
+  test:
+    needs: [ 'build' ]
+    steps:
+      - uses: actions/download-artifacts@v3
+        with:
+          name: cautious-meme
+      - run: |
+         ls
+         ./main
