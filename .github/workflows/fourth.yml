@@ -27,8 +27,8 @@ jobs:
       echo ${{ env.SCOPE }}
    - name: 'Segundo step'
      run: echo ${{ env.SCOPE }}
-  job2:
-   name: 'Segundo trabajo'
-   runs-on: ubuntu-latest
-   steps:
-   - run: echo ${{ env.SCOPE }}
+ job2:
+  name: 'Segundo trabajo'
+  runs-on: ubuntu-latest
+  steps:
+  - run: echo ${{ env.SCOPE }}
