@@ -17,7 +17,7 @@ jobs:
           path: ./cautious-meme
       #Remove
       - run: ls
-      - run: ls /cautious-meme
+      - run: ls ./cautious-meme
       - run: gcc ./cautious-meme/main.c -o main
       - uses: actions/upload-artifact@v3
         with:
