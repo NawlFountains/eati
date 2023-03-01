@@ -22,6 +22,7 @@ jobs:
           path: ./${{ env.FILE_NAME }}
   test:
     needs: [ 'build' ]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifacts@v3
         with:
