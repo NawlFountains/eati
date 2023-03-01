@@ -29,5 +29,8 @@ jobs:
           name: cautious-meme
       - run: |
          ls
+         #Granting permission to execute main
          chmod 754 main
          ./main
+         test $? -eq 0 && echo 'Exito' || echo 'Error'
+
