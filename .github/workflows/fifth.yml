@@ -1,0 +1,12 @@
+name: Fifth
+on:
+  push:
+    branches:
+      - workflowSecret
+
+jobs:
+  job1:
+    name: 'Primer trabajo'
+    runs-on: ubuntu-latest
+    steps:
+      run: echo ${{ secrets.SECRET_VARIABLE }}
