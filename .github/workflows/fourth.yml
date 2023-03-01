@@ -13,12 +13,12 @@ jobs:
   name: 'Primer trabajo'
   runs-on: ubuntu-latest
   env:
-   JOB_VARIABLE: 'variable job'
+   JOB_VARIABLE: 'job_variable job'
    SCOPE: 'scope override job'
   steps:
    - name: 'Primer step'
      env:
-      STEP_VARIABLE: 'step steps'
+      STEP_VARIABLE: 'step_variable steps'
       SCOPE: 'scope override steps'
      run: |
       echo ${{ env.WORKFLOW_VARIABLE }}
