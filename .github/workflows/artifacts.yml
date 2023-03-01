@@ -4,7 +4,7 @@ on:
     branches:
       - workflowArtifacts
 env:
-  FILE_NAME: main.c
+  FILE_NAME: main
 
 jobs:
   build:
@@ -15,9 +15,6 @@ jobs:
           repository: jmoyano/cautious-meme
           ref: main
           path: ./cautious-meme
-      #Remove
-      - run: ls
-      - run: ls ./cautious-meme
       - run: gcc ./cautious-meme/main.c -o main
       - uses: actions/upload-artifact@v3
         with:
