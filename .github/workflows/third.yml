@@ -13,11 +13,12 @@ jobs:
     with: 
      repository: jmoyano/eati2023
      ref: main
-     path: ./eati
-  - run: cat eati/message.txt
+     path: ./eatiMain
   - uses: actions/checkout@v3
     with: 
      repository: jmoyano/eati2023
      ref: anotherbranch
-     path: ./eati
-  - run: cat eati/message.txt
+     path: ./eatiAnotherBranch
+  - run: |
+     cat eatiMain/message.txt
+     cat eatiAnotherBranch/message.txt
