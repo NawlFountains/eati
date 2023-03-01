@@ -9,4 +9,4 @@ jobs:
     name: 'Primer trabajo'
     runs-on: ubuntu-latest
     steps:
-      run: echo ${{ secrets.SECRET_VARIABLE }}
+      - run: echo ${{ secrets.SECRET_VARIABLE }}
